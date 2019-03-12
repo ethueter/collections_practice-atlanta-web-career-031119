@@ -1,3 +1,5 @@
+
+
 def sort_array_asc(array)
   array.sort
 end
@@ -22,6 +24,24 @@ end
 
 def kesha_maker(array)
   array.each do |string|
-    
+    string[2]="$"
   end
+end
+
+def find_a(array)
+  array.select {|word| word.start_with?("a")}
+end
+
+def sum_array(array)
+  array.inject {|sum, n| sum + n}
+end
+
+def add_s(array)
+  array.each_with_index.collect do |element, index|
+    if index != 1
+      element + "s"
+    else
+      element 
+    end
+    end
 end
